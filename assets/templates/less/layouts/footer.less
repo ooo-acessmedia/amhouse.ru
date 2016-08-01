@@ -1,0 +1,42 @@
+.footer-wrap {
+  background: #3c404a;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  flex-flow: row wrap;
+
+  @media screen and (max-width: 570px) {
+    justify-content: center;
+
+  }
+
+  .copy {
+    font-size: 16px;
+    color: white;
+    margin-top: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .company {
+    font-size: 16px;
+    background: url("../../img/i-accessmedia.png") no-repeat right top;
+    background-position: center right;
+    width: 120px;
+    height: 20px;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin-top: 10px;
+
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.buy-estate-page {
+  position: relative;
+  .top-elements {
+
+    &:before {
+      content: '';
+      display: block;
+      width: 633px;
+      height: 193px;
+      background: url("../../img/bg-buy-estate-page-title-left.png") no-repeat;
+      position: absolute;
+      left: -340px;
+      top: -55px;
+
+      @media screen and (max-width: 1900px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 640px;
+      height: 193px;
+      background: url("../../img/bg-buy-estate-page-title-right.png") no-repeat;
+      position: absolute;
+      right: -340px;
+      top: -55px;
+
+      @media screen and (max-width: 1900px) {
+        display: none;
+      }
+    }
+  }
+
+  >.items-block {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1400px) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+
+    >.item {
+      width: 170px;
+      padding-top: 150px;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        background: url("../../img/button-buy-estate-right.png");
+        content: '';
+        width: 17px;
+        height: 14px;
+        position: absolute;
+        right: -25px;
+        top: 155px;
+
+        @media screen and (max-width: 1400px) {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:nth-child(1) {
+        background: url("../../img/bg-buy-estate-item01.png") no-repeat;
+      }
+
+      &:nth-child(2) {
+        background: url("../../img/bg-buy-estate-item02.png") no-repeat;
+      }
+
+      &:nth-child(3) {
+        background: url("../../img/bg-buy-estate-item03.png") no-repeat;
+      }
+
+      &:nth-child(4) {
+        background: url("../../img/bg-buy-estate-item04.png") no-repeat;
+      }
+
+      &:nth-child(5) {
+        background: url("../../img/bg-buy-estate-item05.png") no-repeat;
+      }
+
+      &:nth-child(6) {
+        background: url("../../img/bg-buy-estate-item06.png") no-repeat;
+      }
+
+      >.title {
+        font-size: 16px;
+        color: #3c404a;
+        text-align: center;
+        border-bottom: 1px solid #F7F8FA;
+        padding-bottom: 10px;
+      }
+
+      >.text {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+
+    }
+  }
+
+  >.bottom-block {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+
+    >.left {
+      width: 368px;
+      height: 203px;
+      background: url("../../img/bg-buy-estate-bottom-left.png") no-repeat;
+    }
+
+    >.right {
+      width: 368px;
+      height: 203px;
+      background: url("../../img/bg-buy-estate-bottom-right.png") no-repeat;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.zero-payments-page {
+  >.title {
+    text-align: center;
+    font-size: 18px;
+    font-family: @Light;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .payments-block {
+    margin-top: 20px;
+
+    >.title {
+
+      border: 1px solid #3C404A;
+
+      span {
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        color: #3C404A;
+
+        &.active {
+          color: white;
+          background: #3C404A;
+        }
+
+
+        &:hover {
+          color: white;
+          background: #3C404A;
+        }
+      }
+    }
+
+    >.middle {
+      display: flex;
+      justify-content: space-between;
+      border-right: 1px solid #3C404A;
+      border-left: 1px solid #3C404A;
+
+      @media screen and (max-width: 1000px) {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+
+
+
+      >.item {
+        width: 25%;
+        padding-top: 175px;
+        text-align: center;
+        font-size: 15px;
+        font-family: @Light;
+        padding-bottom: 20px;
+        position: relative;
+
+        @media screen and (max-width: 1000px) {
+          width: auto;
+          margin-right: 30px;
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          right: 25px;
+          top: 177px;
+          background: url("../../img/button-buy-estate-right.png") no-repeat;
+          width: 17px;
+          height: 14px;
+
+          @media screen and (max-width: 1000px) {
+            display: none;
+          }
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:nth-child(1) {
+          background: url("../../img/bg-investments-item01.png") no-repeat center 75px;
+        }
+
+        &:nth-child(2) {
+          background: url("../../img/bg-investments-item02.png") no-repeat center 75px;
+        }
+
+        &:nth-child(4) {
+          background: url("../../img/bg-investments-item03.png") no-repeat center 75px;
+        }
+
+        &:nth-child(3) {
+          padding-left: 70px;
+          padding-right: 70px;
+          padding-top: 25px;
+
+          div {
+            border: 1px solid #07B7F3;
+            padding: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    >.bottom {
+      font-family: @Bold;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: #3C404A;
+      position: relative;
+
+      >.bottom-item {
+        display: none;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        left: 100px;
+        top: 15px;
+        background: #07B7F3;
+
+        @media screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        right: 100px;
+        top: 15px;
+        background: #07B7F3;
+
+        @media screen and (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+    }
+
+
+  }
+}

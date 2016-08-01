@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /manager/
+Disallow: /assets/components/
+Disallow: /core/
+Disallow: /mgr/
+Disallow: /connectors/
+Disallow: /index.php
+Disallow: *?
+Host: amhouse.ru
+Sitemap: http://amhouse.ru/sitemap.xml

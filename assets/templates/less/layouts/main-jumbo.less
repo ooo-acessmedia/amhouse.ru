@@ -1,0 +1,84 @@
+.main-jumbo-wrap {
+  padding-top: 80px;
+  padding-bottom: 138px;
+  background: url("../../img/bg-jumbo-wrap.png") no-repeat;
+
+  @media screen and (max-width: 820px) {
+    background: #00d0ff;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+}
+
+.main-jumbo {
+
+}
+
+.jumbo-block {
+  text-align: center;
+  padding: 33px 70px;
+  background: rgba(64, 64, 66, 0.8);
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 355px;
+    height: 248px;
+    background: url("../../img/decor-jumbo-left.png") no-repeat;
+    left: -3px;
+    top: -3px;
+
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 355px;
+    height: 248px;
+    background: url("../../img/decor-jumbo-right.png") no-repeat;
+    right: -3px;
+    top: -3px;
+
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    color: white;
+    font-family: @Medium;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 15px;
+    word-break: break-all;
+
+    > span {
+      color: #07b7f3;
+      font-family: @Light;
+
+      span {
+        font-family: @Thin;
+      }
+    }
+  }
+
+  .text {
+    font-family: @Light;
+    color: white;
+    font-size: 24px;
+    line-height: 28px;
+
+    span {
+      font-family: @Thin;
+    }
+  }
+}

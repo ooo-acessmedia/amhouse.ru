@@ -1,0 +1,104 @@
+.investments-page {
+  table {
+
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+      margin: 0;
+      width: 100%;
+    }
+
+
+
+
+      tr:first-child {
+        background: #3C404A;
+        th {
+          font-size: 17px;
+          color: white;
+          padding-top: 50px;
+          text-align: center;
+          padding-bottom: 10px;
+          padding-left: 70px;
+          padding-right: 70px;
+          font-weight: normal;
+
+          @media screen and (max-width: 800px) {
+            padding: 0;
+            padding-top: 50px;
+          }
+
+          &:nth-child(1) {
+            background: url("../../img/bg-investments-item01b.png") no-repeat center 10px;
+          }
+
+          &:nth-child(2) {
+            background: url("../../img/bg-investments-item02b.png") no-repeat center 10px;
+          }
+
+          &:nth-child(3) {
+            background: url("../../img/bg-investments-item03b.png") no-repeat center 10px;
+          }
+        }
+      }
+
+
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border: 1px solid #DDDDDD;
+        }
+
+        .buttons-block {
+          input {
+            text-align: center;
+          }
+
+          span {
+            display: inline-block;
+            margin-left: 50px;
+            margin-right: 50px;
+          }
+
+          select {
+            height: 28px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 3px;
+          }
+
+          button {
+            color: white;
+            background: #07B7F3;
+            padding: 3px;
+            border: none;
+
+            &:hover {
+              transform: scale(1.03);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .more-info {
+    font-size: 20px;
+    color: white;
+    background: #07B7F3;
+    padding: 10px 25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+}

@@ -1,0 +1,103 @@
+.main-why-wrap {
+
+}
+
+.main-why {
+  padding-top: 44px;
+
+  .title {
+    font-size: 35px;
+    font-family: @Medium;
+    text-align: center;
+    color: #3b3e47;
+    margin-bottom: 34px;
+  }
+
+  .teasers {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    .teasers-item {
+      max-width: 541px;
+      margin-bottom: 40px;
+
+
+      .teaser-title {
+        font-size: 20px;
+        font-family: @Light;
+        margin-bottom: 23px;
+        font-weight: bold;
+      }
+
+      .teaser-text {
+        font-size: 16px;
+        color: #3b3e47;
+        font-family: @Regular;
+      }
+
+      &:nth-child(even) {
+        padding-left: 100px;
+
+        .teaser-title {
+          text-align: left;
+        }
+
+        .teaser-text {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(odd) {
+        padding-right: 100px;
+
+        .teaser-title {
+          text-align: right;
+        }
+
+        .teaser-text {
+          text-align: right;
+        }
+      }
+
+      &:nth-child(1) {
+        background: url("../../img/i-why-item-01.png") no-repeat right 15px top;
+      }
+
+      &:nth-child(2) {
+        background: url("../../img/i-why-item-02.png") no-repeat left 15px top;
+      }
+
+      &:nth-child(3) {
+        background: url("../../img/i-why-item-03.png") no-repeat right 15px top;
+      }
+
+      &:nth-child(4) {
+        background: url("../../img/i-why-item-04.png") no-repeat left 15px top;
+      }
+
+      &:nth-child(5) {
+        background: url("../../img/i-why-item-05.png") no-repeat right 15px top;
+      }
+
+      &:nth-child(6) {
+        background: url("../../img/i-why-item-06.png") no-repeat left 15px top;
+      }
+
+      &:nth-child(7) {
+        background: url("../../img/i-why-item-07.png") no-repeat right 15px top;
+      }
+
+      &:nth-child(8) {
+        background: url("../../img/i-why-item-08.png") no-repeat left 15px top;
+      }
+
+
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+}
