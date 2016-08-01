@@ -1,2 +1,0 @@
-# amhouse.ru
-amhouse.ru
