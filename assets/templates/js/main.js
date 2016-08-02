@@ -13,7 +13,13 @@
     $('#tv-projectcategory_0').on('change', function () {
         if ($('#tv-projectcategory_0 :selected').data().sort === 0) {
             $('#mse2_filters').find('>fieldset').not('#mse2_tv-projectcategory').addClass('is-vis-hidden');
-            location.href = 'http://amhouse.ru/proektyi/?tv|projectcategory=novostroika';
+            $('#tv-projectrooms_0').prop('disabled', 'true');
+            $('#tv-projectsizefilter_0').prop('disabled', 'true');
+            $('#tv-projectpricefilter_0').prop('disabled', 'true');
+            $('#mse2_tvprojectparking_0').prop('checked', false).prop('disabled', true);
+            $('#mse2_tvprojectbox_0').prop('checked', false).prop('disabled', true);
+            $('#mse2_tvprojectveranda_0').prop('checked', false).prop('disabled', true);
+
         } else {
             $('#mse2_filters').find('>fieldset').not('#mse2_tv-projectcategory').removeClass('is-vis-hidden');
         }
@@ -35,6 +41,7 @@
     if (location.pathname === '/proektyi/' && localStorage.getItem('outerPage') === '1') {
         location.search = localStorage.getItem('filterUrl');
         localStorage.setItem('outerPage', '2');
+        $('.filter-button').addClass('is-vis-hidden');
     }
 
     // Fancybox
