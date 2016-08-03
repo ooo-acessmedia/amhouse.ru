@@ -9,6 +9,15 @@
     // $(window).on('resize', function () {
     //    cl($(window).width());
     // });
+    
+    Number.prototype.formatMoney = function (c, t) {
+        var n = this;
+        c = (c === undefined ? 0 : c); 
+        t = (t === undefined ? " " : t);
+        return n.toFixed(c).toString().replace(/./g, function(c, i, a) {
+            return i && c !== "." && ((a.length - i) % 3 === 0) ? t + c : c;
+        });
+    }
 
     $('#tv-projectcategory_0').on('change', function () {
         if ($('#tv-projectcategory_0 :selected').data().sort === 0) {
@@ -209,7 +218,7 @@
             $calcMontlyPay = $(this).parents('.m-calculator').find('.calc-montly-pay');
 
         var montlyPay,
-            price = $calcPrice.val(),
+            price = $calcPrice.val().replace(/ /g, ''),
             creditYear = $calcCreditYear.val(),
             bankCredit = $calcBankCredit.val() / 100,
             calcBid = $calcBid.val() / 100;
@@ -219,12 +228,16 @@
 
         if (!isNaN(montlyPay)) {
             montlyPay = Math.floor(montlyPay);
-            $calcMontlyPay.html(montlyPay);
+            $calcMontlyPay.html(montlyPay.formatMoney());
             $(this).parents('.m-calculator').find('.calculator-error').html('');
         } else {
             montlyPay = 'Введите числовые значения';
             $(this).parents('.m-calculator').find('.calculator-error').html(montlyPay);
         }
+    });
+    
+    $('.m-calculator .calculator-title input').on('keyup', function () {
+        $(this).val(Number($(this).val().replace(/ /g, '')).formatMoney());
     });
 
     // Переменные для формы
@@ -248,10 +261,13 @@
 
     var activatePopupForm = function (activateButton, formPopup, formFade) {
         activateButton.on('click', function () {
-            formPopup.add(formFade).addClass('is-visible fade-in');
+            var $this = $(this);
             setTimeout(function () {
-                formPopup.add(formFade).removeClass('fade-in');
-            }, 300);
+                formPopup.add(formFade).addClass('is-visible fade-in');
+                setTimeout(function () {
+                    formPopup.add(formFade).removeClass('fade-in');
+                }, 300);
+            }, $this.hasClass('calculator-button') ? 10000 : 0);
 
             // Добавляем значение цены для калкурятора в зависимости от кнопки по которой кликнули
 
@@ -418,6 +434,3 @@
 
 
 })(jQuery);
-
-
-
