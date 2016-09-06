@@ -7630,7 +7630,7 @@ body {
             justify-content: center;
   }
 }
-.main-filters form button {
+.main-filters form .filter-button {
   border: none;
   font-family: 'Roboto-Bold';
   font-size: 13px;
@@ -7638,8 +7638,13 @@ body {
   height: 22px;
   background: url("../img/bg-filter-button.png") no-repeat;
   margin-top: 28px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 2px;
 }
-.main-filters form button a {
+.main-filters form .filter-button a {
   color: #000;
   text-decoration: none;
 }
@@ -8971,6 +8976,7 @@ body {
   color: white;
 }
 .m-calculator .calc-bank-credit input {
+  width: 60px;
   background: none;
   border: none;
   color: white;
